@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on LeaveIt</title>
-    <link>http://Judie1999.github.io/tags/</link>
-    <description>Recent content in Tags on LeaveIt</description>
+    <title>Tags on Judy Park</title>
+    <link>http://judie1999.github.io/tags/</link>
+    <description>Recent content in Tags on Judy Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://Judie1999.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://judie1999.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>notes</title>
-      <link>http://Judie1999.github.io/tags/notes/</link>
+      <link>http://judie1999.github.io/tags/notes/</link>
       <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://Judie1999.github.io/tags/notes/</guid>
+      <guid>http://judie1999.github.io/tags/notes/</guid>
       <description></description>
     </item>
     

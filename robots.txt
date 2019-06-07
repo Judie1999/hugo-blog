@@ -63,4 +63,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: http://Judie1999.github.io/sitemap.xml
+Sitemap: http://judie1999.github.io/sitemap.xml
