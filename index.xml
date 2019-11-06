@@ -5,8 +5,34 @@
     <description>Recent content in Judy Park on Judy Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Reading List（更新中）</title>
+      <link>https://Judie1999.github.io/2019/readinglist/</link>
+      <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://Judie1999.github.io/2019/readinglist/</guid>
+      <description>
+
+&lt;h2 id=&#34;winning-solution-for-the-spacenet-challenge-joint-learning-with-openstreetmap-link-https-i-ho-lc-winning-solution-for-the-spacenet-challenge-joint-learning-with-openstreetmap-html&#34;&gt;Winning Solution for the Spacenet Challenge: Joint Learning with OpenStreetMap   [&lt;a href=&#34;https://i.ho.lc/winning-solution-for-the-spacenet-challenge-joint-learning-with-openstreetmap.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;SpaceNet Challenge 2 的 wining solution，集成了U-Net，并用了open street map。个人感觉在这个challenge上跑出了非常漂亮的分数，不过用了比较多的trick（包括用osm强化，包括集成不止一个U-Net），目前的问题是面对Shanghai和Khartoum的成片密集小房子容易连成一个大房子（见Figure 4）。&lt;/p&gt;
+
+&lt;h2 id=&#34;learning-to-adapt-structured-output-space-for-semantic-segmentation-pdf-http-openaccess-thecvf-com-content-cvpr-2018-papers-tsai-learning-to-adapt-cvpr-2018-paper-pdf-code-https-github-com-wasidennis-adaptsegnet&#34;&gt;Learning to Adapt Structured Output Space for Semantic Segmentation    [&lt;a href=&#34;http://openaccess.thecvf.com/content_cvpr_2018/papers/Tsai_Learning_to_Adapt_CVPR_2018_paper.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]    [&lt;a href=&#34;https://github.com/wasidennis/AdaptSegNet&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;CVPR 2018论文，用多层adversarial network对不同feature level的ouput space做domain adaptation，感觉上有点像reading group分享论文的loss减少版，但是对很多层都有做DA。在mIoU基本都是最高，但是部分上来看并不一定最好。考虑到我们面对的只有判断是否是building，相当于我们只看其中一类的IoU，这种方法感觉可能不太行（感觉上还是有点暴力）。&lt;/p&gt;
+
+&lt;h2 id=&#34;context-reinforced-semantic-segmentation-pdf-http-openaccess-thecvf-com-content-cvpr-2019-papers-zhou-context-reinforced-semantic-segmentation-cvpr-2019-paper-pdf-code-https-github-com-scenarios&#34;&gt;Context-Reinforced Semantic Segmentation    [&lt;a href=&#34;http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhou_Context-Reinforced_Semantic_Segmentation_CVPR_2019_paper.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]    [&lt;a href=&#34;https://github.com/scenarios&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;CVPR 2019论文，将context learning化为MDP来做，分成了Segment Net和Context Net两个sub-network（见Figure 2），用contex map来辅助segment net生成预测结果，再用生成的结果调整context net。&lt;/p&gt;
+
+&lt;h2 id=&#34;object-contextual-representations-for-semantic-segmentation-pdf-https-arxiv-org-pdf-1909-11065-pdf-code-https-github-com-pkurainbow-ocnet-pytorch&#34;&gt;Object-Contextual Representations for Semantic Segmentation    [&lt;a href=&#34;https://arxiv.org/pdf/1909.11065.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]    [&lt;a href=&#34;https://github.com/PkuRainBow/OCNet.pytorch&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;在很多数据集上都有非常高的分数。大致思路是加context来帮助预测，模型感觉不是很好搭还在看。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>纽约三日游</title>
