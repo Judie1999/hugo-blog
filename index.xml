@@ -16,6 +16,10 @@
       <guid>https://Judie1999.github.io/2019/readinglist/</guid>
       <description>
 
+&lt;h2 id=&#34;joint-learning-from-earth-observation-and-openstreetmap-data-to-get-faster-better-semantic-maps-pdf-https-arxiv-org-pdf-1705-06057-pdf&#34;&gt;Joint Learning from Earth Observation and OpenStreetMap Data to Get Faster Better Semantic Maps    [&lt;a href=&#34;https://arxiv.org/pdf/1705.06057.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;启发了winning solution的一篇文章。用OpenStreetMap的数据一起学。考虑到OSM图会比较粗糙（看起来方方正正的），但是相对来说干扰也没有那么多，也许可以成为和替代dem的方法？&lt;/p&gt;
+
 &lt;h2 id=&#34;winning-solution-for-the-spacenet-challenge-joint-learning-with-openstreetmap-link-https-i-ho-lc-winning-solution-for-the-spacenet-challenge-joint-learning-with-openstreetmap-html&#34;&gt;Winning Solution for the Spacenet Challenge: Joint Learning with OpenStreetMap   [&lt;a href=&#34;https://i.ho.lc/winning-solution-for-the-spacenet-challenge-joint-learning-with-openstreetmap.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;]&lt;/h2&gt;
 
 &lt;p&gt;SpaceNet Challenge 2 的 wining solution，集成了U-Net，并用了open street map。个人感觉在这个challenge上跑出了非常漂亮的分数，不过用了比较多的trick（包括用osm强化，包括集成不止一个U-Net），目前的问题是面对Shanghai和Khartoum的成片密集小房子容易连成一个大房子（见Figure 4）。&lt;/p&gt;
