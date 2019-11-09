@@ -57,7 +57,7 @@
     "datePublished": "2019-11-06 00:00:00 \x2b0000 UTC",
     "dateModified" : "2019-11-06 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2019\/readinglist\/",
-    "wordCount" : "933",
+    "wordCount" : "931",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -128,7 +128,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9D%82%E9%A1%B9/"> 杂项 </a>
                         
                 </span>
-                <span class="post-word-count">, 933 words</span>
+                <span class="post-word-count">, 931 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -163,7 +163,7 @@
 
 <p>SpaceNet Challenge 2 的 wining solution，集成了U-Net，并用了open street map。个人感觉在这个challenge上跑出了非常漂亮的分数，不过用了比较多的trick（包括用osm强化，包括集成不止一个U-Net），目前的问题是面对Shanghai和Khartoum的成片密集小房子容易连成一个大房子（见Figure 4）。</p>
 
-<p>仔细看一下的话这个方法的本质在于加channel，winner除了8-band之外还利用了5个osm层，每个pixel会有13个channel，并且osm层会提供大量信息————water区域不太会有building，农业用地不太会有building之类的。这些channel确实能够很好的帮助模型进行判断，根据osm的信息感觉上确实会比较容易得到更加robust的feature。</p>
+<p>仔细看一下的话这个方法的本质在于加channel，winner除了8-band之外还利用了5个osm层，每个pixel会有13个channel，并且osm层会提供大量信息——water区域不太会有building，农业用地不太会有building之类的。这些channel确实能够很好的帮助模型进行判断，根据osm的信息感觉上确实会比较容易得到更加robust的feature。</p>
 
 <h2 id="learning-to-adapt-structured-output-space-for-semantic-segmentation-pdf-http-openaccess-thecvf-com-content-cvpr-2018-papers-tsai-learning-to-adapt-cvpr-2018-paper-pdf-code-https-github-com-wasidennis-adaptsegnet">Learning to Adapt Structured Output Space for Semantic Segmentation    [<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Tsai_Learning_to_Adapt_CVPR_2018_paper.pdf" rel="nofollow noreferrer" target="_blank">pdf</a>]    [<a href="https://github.com/wasidennis/AdaptSegNet" rel="nofollow noreferrer" target="_blank">code</a>]</h2>
 
