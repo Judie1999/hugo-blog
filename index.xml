@@ -125,7 +125,7 @@
     </item>
     
     <item>
-      <title>Reading List（更新中）</title>
+      <title>Reading List (In Progress)</title>
       <link>https://Judie1999.github.io/2019/readinglist/</link>
       <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
       
@@ -136,27 +136,35 @@
 
 &lt;h2 id=&#34;joint-learning-from-earth-observation-and-openstreetmap-data-to-get-faster-better-semantic-maps-pdf-https-arxiv-org-pdf-1705-06057-pdf&#34;&gt;Joint Learning from Earth Observation and OpenStreetMap Data to Get Faster Better Semantic Maps    [&lt;a href=&#34;https://arxiv.org/pdf/1705.06057.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]&lt;/h2&gt;
 
-&lt;p&gt;启发了winning solution的一篇文章。用OpenStreetMap的数据一起学。考虑到OSM图会比较粗糙（看起来方方正正的），但是相对来说干扰也没有那么多，也许可以成为和替代dem的方法？&lt;/p&gt;
+&lt;p&gt;Winner of the Spacenet Challenge II says this paper inspired him. OpenStreetMap data was included to help.&lt;/p&gt;
 
-&lt;p&gt;但是OSM的处理和具体怎么结合会是比较困难的部分，并且这个数据集的winning solution就是用了这个增强。&lt;/p&gt;
+&lt;p&gt;I thought the difficulty would be how to combine the OSM data with the satellite image, like the weight or normalization. Actually the problem was that we do not have much high quality OSM data. I tried to find some OSM for water area and forest, but most areas of the maps were blank. The data link provided by the winner is no longer available.&lt;/p&gt;
 
 &lt;h2 id=&#34;winning-solution-for-the-spacenet-challenge-joint-learning-with-openstreetmap-link-https-i-ho-lc-winning-solution-for-the-spacenet-challenge-joint-learning-with-openstreetmap-html&#34;&gt;Winning Solution for the Spacenet Challenge: Joint Learning with OpenStreetMap   [&lt;a href=&#34;https://i.ho.lc/winning-solution-for-the-spacenet-challenge-joint-learning-with-openstreetmap.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;]&lt;/h2&gt;
 
-&lt;p&gt;SpaceNet Challenge 2 的 wining solution，集成了U-Net，并用了open street map。个人感觉在这个challenge上跑出了非常漂亮的分数，不过用了比较多的trick（包括用osm强化，包括集成不止一个U-Net），目前的问题是面对Shanghai和Khartoum的成片密集小房子容易连成一个大房子（见Figure 4）。&lt;/p&gt;
+&lt;p&gt;Winning solution of &lt;u&gt;SpaceNet Challenge Round 2&lt;/u&gt;. XD_XD got the highest overall IoU score in the challenge. The final submission was the averaging ensemble from individually trained three U-Net models, and he used OpenStreetMap data. The link for OSM data is no longer available.&lt;/p&gt;
 
-&lt;p&gt;仔细看一下的话这个方法的本质在于加channel，winner除了8-band之外还利用了5个osm层，每个pixel会有13个channel，并且osm层会提供大量信息——water区域不太会有building，农业用地不太会有building之类的。这些channel确实能够很好的帮助模型进行判断，根据osm的信息感觉上确实会比较容易得到更加robust的feature。&lt;/p&gt;
+&lt;p&gt;He mentioned that 8-band multispectral data improved the performance of his model. However in my experiment, the result was the same as when I was using RGB images. I suppose it is because we are using DeepLab, which is the current state-of-the-art segmentation model. Both RGB and 8-band data are about the light wave, and the DeepLab model is able to extract enough information from the RGB data.&lt;/p&gt;
+
+&lt;p&gt;His model is unable to recognize multiple buildings that are close in distance as one building footprint. This is also a reason for our low score on Shanghai and Khartoum. He also mentioned the ambiguous annotation rules in Khartoum.&lt;/p&gt;
+
+&lt;p&gt;From the sample images provided on his page, it seems that he did not perform orthorectification. I think this is OK for a challenge where competitors want to achieve higher scores, but I suppose we need to process the data if we want to use it as a benchmark. Also this feature of satellite images makes the edges quite confusing from the images. If we could find a way to othorectify before we do the segmentation, I think the performance could be improved. But I haven&amp;rsquo;t found an effective method. I&amp;rsquo;m still trying to find a orthorectification method.&lt;/p&gt;
 
 &lt;h2 id=&#34;learning-to-adapt-structured-output-space-for-semantic-segmentation-pdf-http-openaccess-thecvf-com-content-cvpr-2018-papers-tsai-learning-to-adapt-cvpr-2018-paper-pdf-code-https-github-com-wasidennis-adaptsegnet&#34;&gt;Learning to Adapt Structured Output Space for Semantic Segmentation    [&lt;a href=&#34;http://openaccess.thecvf.com/content_cvpr_2018/papers/Tsai_Learning_to_Adapt_CVPR_2018_paper.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]    [&lt;a href=&#34;https://github.com/wasidennis/AdaptSegNet&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;]&lt;/h2&gt;
 
-&lt;p&gt;CVPR 2018论文，用多层adversarial network对不同feature level的ouput space做domain adaptation，感觉上有点像reading group分享论文的loss减少版，但是对很多层都有做DA。在mIoU基本都是最高，但是部分上来看并不一定最好。考虑到我们面对的只有判断是否是building，相当于我们只看其中一类的IoU，这种方法感觉可能不太行（感觉上还是有点暴力）。&lt;/p&gt;
+&lt;p&gt;This is a paper from CVPR 2018. They uses several adversarial networks for output spaces of different feature levels. It performs domain adaptation on different layers and got the highest mIoU score on benchmark. However, it did not perform so well on some single IoU scores.&lt;/p&gt;
+
+&lt;p&gt;Considering we only want to find the building footprints, adding adversarial networks may not help so much.&lt;/p&gt;
 
 &lt;h2 id=&#34;context-reinforced-semantic-segmentation-pdf-http-openaccess-thecvf-com-content-cvpr-2019-papers-zhou-context-reinforced-semantic-segmentation-cvpr-2019-paper-pdf-code-https-github-com-scenarios&#34;&gt;Context-Reinforced Semantic Segmentation    [&lt;a href=&#34;http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhou_Context-Reinforced_Semantic_Segmentation_CVPR_2019_paper.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]    [&lt;a href=&#34;https://github.com/scenarios&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;]&lt;/h2&gt;
 
-&lt;p&gt;CVPR 2019论文，将context learning化为MDP来做，分成了Segment Net和Context Net两个sub-network（见Figure 2），用contex map来辅助segment net生成预测结果，再用生成的结果调整context net。&lt;/p&gt;
+&lt;p&gt;This is a paper from CVPR 2019. They use MDP for context learning. The model is divided into segment net and context net. Context map helps segment net to predict, and the prediction in turn helps adjust context net.&lt;/p&gt;
+
+&lt;p&gt;I noticed several papers in 2019 tried to improve the performance with context. But the training seems a little tricky and I&amp;rsquo;m still trying to understand some parts of the model.&lt;/p&gt;
 
 &lt;h2 id=&#34;object-contextual-representations-for-semantic-segmentation-pdf-https-arxiv-org-pdf-1909-11065-pdf-code-https-github-com-pkurainbow-ocnet-pytorch&#34;&gt;Object-Contextual Representations for Semantic Segmentation    [&lt;a href=&#34;https://arxiv.org/pdf/1909.11065.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]    [&lt;a href=&#34;https://github.com/PkuRainBow/OCNet.pytorch&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;]&lt;/h2&gt;
 
-&lt;p&gt;在很多数据集上都有非常高的分数。大致思路是加context来帮助预测，模型感觉不是很好搭还在看。&lt;/p&gt;
+&lt;p&gt;This is also a paper using context. It achieved high scores on many datasets. But the model is also a little confusing.&lt;/p&gt;
 </description>
     </item>
     

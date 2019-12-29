@@ -30,12 +30,12 @@
     </item>
     
     <item>
-      <title>Reading List（更新中）</title>
+      <title>Reading List (In Progress)</title>
       <link>https://Judie1999.github.io/2019/readinglist/</link>
       <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://Judie1999.github.io/2019/readinglist/</guid>
-      <description>Joint Learning from Earth Observation and OpenStreetMap Data to Get Faster Better Semantic Maps [pdf] 启发了winning solution的一篇文章。用OpenStreetMap的数据一起学。考虑到OSM图会比较</description>
+      <description>Joint Learning from Earth Observation and OpenStreetMap Data to Get Faster Better Semantic Maps [pdf] Winner of the Spacenet Challenge II says this paper inspired him. OpenStreetMap data was included to help. I thought the difficulty would be how to combine the OSM data with the satellite image, like the weight or normalization. Actually the problem was that we do not have much high quality OSM data. I tried to</description>
     </item>
     
     <item>
