@@ -58,9 +58,38 @@
     "datePublished": "2019-11-06 00:00:00 \x2b0000 UTC",
     "dateModified" : "2019-11-06 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2019\/readinglist\/",
-    "wordCount" : "535",
+    "wordCount" : "697",
     "keywords" : [ "notes", "Judy Park"]
 }
+</script>
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
 </script>
 
 </head>
@@ -129,7 +158,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9D%82%E9%A1%B9/"> 杂项 </a>
                         
                 </span>
-                <span class="post-word-count">, 535 words</span>
+                <span class="post-word-count">, 697 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -181,6 +210,16 @@
 <h2 id="object-contextual-representations-for-semantic-segmentation-pdf-https-arxiv-org-pdf-1909-11065-pdf-code-https-github-com-pkurainbow-ocnet-pytorch">Object-Contextual Representations for Semantic Segmentation    [<a href="https://arxiv.org/pdf/1909.11065.pdf" rel="nofollow noreferrer" target="_blank">pdf</a>]    [<a href="https://github.com/PkuRainBow/OCNet.pytorch" rel="nofollow noreferrer" target="_blank">code</a>]</h2>
 
 <p>This is also a paper using context. It achieved high scores on many datasets. But the model is also a little confusing.</p>
+
+<h2 id="unsupervised-domain-adaptation-to-improve-segmentation-quality-both-in-source-and-target-domain-pdf-http-openaccess-thecvf-com-content-cvprw-2019-papers-saiad-bolte-unsupervised-domain-adaptation-to-improve-image-segmentation-quality-both-in-cvprw-2019-paper-pdf">Unsupervised Domain Adaptation to Improve Segmentation Quality Both in Source and Target Domain [<a href="http://openaccess.thecvf.com/content_CVPRW_2019/papers/SAIAD/Bolte_Unsupervised_Domain_Adaptation_to_Improve_Image_Segmentation_Quality_Both_in_CVPRW_2019_paper.pdf" rel="nofollow noreferrer" target="_blank">pdf</a>]</h2>
+
+<p>This paper focuses on improving performance on both the target domain and the source domain. During training, they add a discriminator on $Ys, Yt$. In this way they hope to minimize the distance between the output of the source domain and target domain. They measure the distance with average of different channels.</p>
+
+<p>There results show that, though they do not have labels for target domains, the discriminator helps reduce the distance and improve the performance. One problem is that they did not do any comparison with performaces with other methods. Another problem is that each time new data arrive, the model need to be trained again.</p>
+
+<h2 id="bidirectional-learning-for-domain-adaptation-of-semantic-segmentation-pdf-https-arxiv-org-pdf-1904-10620-pdf-code-https-github-com-liyunsheng13-bdl">Bidirectional Learning for Domain Adaptation of Semantic Segmentation [<a href="https://arxiv.org/pdf/1904.10620.pdf" rel="nofollow noreferrer" target="_blank">pdf</a>] [<a href="https://github.com/liyunsheng13/BDL" rel="nofollow noreferrer" target="_blank">code</a>]</h2>
+
+<p>The idea is very closely related to cycle-GAN. They propose a bidirectional learning frame work, which means they use both &lsquo;translation-to-segmentation&rsquo; and &lsquo;segmentation-to-translation&rsquo; to improve performance. This seems a version of cycle-GAN.</p>
 
     </div>
 

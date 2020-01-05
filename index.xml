@@ -165,6 +165,16 @@
 &lt;h2 id=&#34;object-contextual-representations-for-semantic-segmentation-pdf-https-arxiv-org-pdf-1909-11065-pdf-code-https-github-com-pkurainbow-ocnet-pytorch&#34;&gt;Object-Contextual Representations for Semantic Segmentation    [&lt;a href=&#34;https://arxiv.org/pdf/1909.11065.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]    [&lt;a href=&#34;https://github.com/PkuRainBow/OCNet.pytorch&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;]&lt;/h2&gt;
 
 &lt;p&gt;This is also a paper using context. It achieved high scores on many datasets. But the model is also a little confusing.&lt;/p&gt;
+
+&lt;h2 id=&#34;unsupervised-domain-adaptation-to-improve-segmentation-quality-both-in-source-and-target-domain-pdf-http-openaccess-thecvf-com-content-cvprw-2019-papers-saiad-bolte-unsupervised-domain-adaptation-to-improve-image-segmentation-quality-both-in-cvprw-2019-paper-pdf&#34;&gt;Unsupervised Domain Adaptation to Improve Segmentation Quality Both in Source and Target Domain [&lt;a href=&#34;http://openaccess.thecvf.com/content_CVPRW_2019/papers/SAIAD/Bolte_Unsupervised_Domain_Adaptation_to_Improve_Image_Segmentation_Quality_Both_in_CVPRW_2019_paper.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;This paper focuses on improving performance on both the target domain and the source domain. During training, they add a discriminator on $Ys, Yt$. In this way they hope to minimize the distance between the output of the source domain and target domain. They measure the distance with average of different channels.&lt;/p&gt;
+
+&lt;p&gt;There results show that, though they do not have labels for target domains, the discriminator helps reduce the distance and improve the performance. One problem is that they did not do any comparison with performaces with other methods. Another problem is that each time new data arrive, the model need to be trained again.&lt;/p&gt;
+
+&lt;h2 id=&#34;bidirectional-learning-for-domain-adaptation-of-semantic-segmentation-pdf-https-arxiv-org-pdf-1904-10620-pdf-code-https-github-com-liyunsheng13-bdl&#34;&gt;Bidirectional Learning for Domain Adaptation of Semantic Segmentation [&lt;a href=&#34;https://arxiv.org/pdf/1904.10620.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;pdf&lt;/a&gt;] [&lt;a href=&#34;https://github.com/liyunsheng13/BDL&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;]&lt;/h2&gt;
+
+&lt;p&gt;The idea is very closely related to cycle-GAN. They propose a bidirectional learning frame work, which means they use both &amp;lsquo;translation-to-segmentation&amp;rsquo; and &amp;lsquo;segmentation-to-translation&amp;rsquo; to improve performance. This seems a version of cycle-GAN.&lt;/p&gt;
 </description>
     </item>
     
