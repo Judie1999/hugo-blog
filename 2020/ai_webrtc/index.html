@@ -47,7 +47,7 @@
     "articleSection" : "posts",
     "name" : "AI \u002b WebRTC (In Progress)",
     "headline" : "AI \u002b WebRTC (In Progress)",
-    "description" : "Reinforcement learning for bandwidth estimation and congestion control in real-time communications [pdf] Target Control sending rate in an RTC system (network simulation \u002b Internet video calls) 难点 realistic reward functions training environment v.s. real-world networks R3Net 介绍了模拟环境、RL formulation、建模与训练。其中模拟环",
+    "description" : "Reinforcement learning for bandwidth estimation and congestion control in real-time communications [pdf] Target Control sending rate in an RTC system (network simulation \u002b Internet video calls) 难点 realistic reward functions training environment 和 real-world networks之间有差距 RTC无法pre-fetch，需要对带宽变化",
     "inLanguage" : "en-us",
     "author" : "Judy",
     "creator" : "Judy",
@@ -58,7 +58,7 @@
     "datePublished": "2020-12-17 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-17 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2020\/ai_webrtc\/",
-    "wordCount" : "742",
+    "wordCount" : "813",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -166,7 +166,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9D%82%E9%A1%B9/"> 杂项 </a>
                         
                 </span>
-                <span class="post-word-count">, 742 words</span>
+                <span class="post-word-count">, 813 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -194,7 +194,16 @@
 <p>realistic reward functions</p>
 </li>
 <li>
-<p>training environment v.s. real-world networks</p>
+<p>training environment 和 real-world networks之间有差距</p>
+</li>
+<li>
+<p>RTC无法pre-fetch，需要对带宽变化做出快速反应，且容错低</p>
+</li>
+<li>
+<p>传输质量受限于用户uplink capacity</p>
+</li>
+<li>
+<p>inference time需要非常短</p>
 </li>
 </ol>
 <p><strong>R3Net</strong></p>

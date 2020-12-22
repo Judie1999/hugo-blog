@@ -13,7 +13,7 @@
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://Judie1999.github.io/2020/ai_webrtc/</guid>
-      <description>Reinforcement learning for bandwidth estimation and congestion control in real-time communications [pdf] Target Control sending rate in an RTC system (network simulation + Internet video calls) 难点 realistic reward functions training environment v.s. real-world networks R3Net 介绍了模拟环境、RL formulation、建模与训练。其中模拟环</description>
+      <description>Reinforcement learning for bandwidth estimation and congestion control in real-time communications [pdf] Target Control sending rate in an RTC system (network simulation + Internet video calls) 难点 realistic reward functions training environment 和 real-world networks之间有差距 RTC无法pre-fetch，需要对带宽变化</description>
     </item>
     
     <item>
