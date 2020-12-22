@@ -6,7 +6,16 @@
     <description>Recent content in notes on Judy Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://Judie1999.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://Judie1999.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI &#43; WebRTC (In Progress)</title>
+      <link>https://Judie1999.github.io/2020/ai_webrtc/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Judie1999.github.io/2020/ai_webrtc/</guid>
+      <description>Reinforcement learning for bandwidth estimation and congestion control in real-time communications [pdf] Target Control sending rate in an RTC system (network simulation + Internet video calls) 难点 realistic reward functions training environment v.s. real-world networks R3Net 介绍了模拟环境、RL formulation、建模与训练。其中模拟环</description>
+    </item>
+    
     <item>
       <title>记录一下杜克的食物</title>
       <link>https://Judie1999.github.io/2019/duke-food/</link>
