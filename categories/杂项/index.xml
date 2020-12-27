@@ -6,16 +6,7 @@
     <description>Recent content in 杂项 on Judy Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://Judie1999.github.io/categories/%E6%9D%82%E9%A1%B9/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AI &#43; WebRTC (In Progress)</title>
-      <link>https://Judie1999.github.io/2020/ai_webrtc/</link>
-      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://Judie1999.github.io/2020/ai_webrtc/</guid>
-      <description>Reinforcement learning for bandwidth estimation and congestion control in real-time communications [pdf] Target Control sending rate in an RTC system (network simulation + Internet video calls) 难点 realistic reward functions training environment 和 real-world networks之间有差距 RTC无法pre-fetch，需要对带宽变化</description>
-    </item>
-    
+    <lastBuildDate>Thu, 29 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://Judie1999.github.io/categories/%E6%9D%82%E9%A1%B9/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>记录一下杜克的食物</title>
       <link>https://Judie1999.github.io/2019/duke-food/</link>
