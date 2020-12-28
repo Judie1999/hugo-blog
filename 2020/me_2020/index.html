@@ -58,7 +58,7 @@
     "datePublished": "2020-12-28 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-28 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2020\/me_2020\/",
-    "wordCount" : "1546",
+    "wordCount" : "2810",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -166,12 +166,14 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"> 期末复习 </a>
                         
                 </span>
-                <span class="post-word-count">, 1546 words</span>
+                <span class="post-word-count">, 2810 words</span>
         </div>
     </header>
     <div class="post-content">
         
 
+        
+            
         
 
         
@@ -259,6 +261,78 @@
 <li>扩散电容$C_D$：取决于少子，正向偏置时较大，反向偏置时很小。</li>
 <li>势垒电容$C_B$：取决于多子。</li>
 <li>PN结正向偏置时，结电容较大，主要取决于扩散电容；PN结反向偏置时，结电容较小，主要取决于势垒电容。</li>
+</ul>
+</li>
+</ol>
+<h2 id="二极管">二极管</h2>
+<ol>
+<li>二极管功能
+<ul>
+<li>PN结单向导电性：整流、检波、开关</li>
+<li>PN结压降：温度传感器、参考电压</li>
+<li>非线性电流-电压特性：调节电压、限制电压、无线电调谐、产生射频振荡、发光</li>
+</ul>
+</li>
+<li>二极管分类
+<ul>
+<li>结构
+<ul>
+<li>点接触型：PN结面积小，结电容小，用于<strong>检波</strong>和<strong>变频</strong>等高频电路。</li>
+<li>面接触型：PN结面积大，用于<strong>工频大电流整流电路</strong>。</li>
+<li>平面型：往往用于集成电路制造工艺中。PN 结面积可大可小，用于<strong>高频整流</strong>和<strong>开关电路</strong>中。</li>
+</ul>
+</li>
+<li>材料：锗二极管、硅二极管、硒二极管、砷化镓二极管</li>
+<li>用途：检波二极管、整流二极管、稳压二极管（齐纳二极管）、开关二极管、肖特基二极管、发光二极管、激光二极管、光电二极管、隧道二极管</li>
+</ul>
+</li>
+<li>二极管的符号
+<img src="/img/me_2020/302_0_symbols.png" alt="二极管的符号"></li>
+<li>伏安特性曲线：$i_D = I_S(e^{v_D/V_T} - 1)$
+<ul>
+<li>硅二极管死区电压：$V_{th} = 0.5 \sim 0.8\text{V}$</li>
+<li>锗二极管死区电压：$V_{th} = 0.1 \sim 0.3\text{V}$</li>
+</ul>
+</li>
+<li>二极管的主要参数
+<ul>
+<li><strong>最大整流电流$I_F$</strong>：二极管连续工作时，允许流过的最大整流电流的平均值。</li>
+<li><strong>反向击穿电流</strong>$V_{BR}$和**最大反向工作电压**$V_{RM}$：二极管反向电流急剧增加时对应的反向电压值称为反向击穿电压$V_{BR}$。为安全计，在实际工作时，最大反向工作电压$V_{RM}$一般只按反向击穿电压$V_{BR}$的一半计算。</li>
+<li><strong>反向电流$I_R$</strong>：在室温下，最大反向工作电压下的反向电流值。硅二极管的反向电流一般在纳安($\text{nA}$)级；锗二极管在微安($\mu\text{A}$)级。</li>
+<li><strong>极间电容</strong> $C_d = C_B + C_D$</li>
+<li><strong>反向恢复时间</strong>$T_{RR}$：当二极管从正向偏置的导通状态，突然转为反向偏置时，需要一定的时间才能变成截止状态，这段时间称为反向恢复时间。（主要原因是扩散电容CD的影响）</li>
+<li><strong>正向压降$V_F$</strong>：在规定的正向电流下，二极管的正向电压降。硅二极管约$0.6\sim 0.8\text{V}$；锗二极管约$0.2\sim 0.3\text{V}$。</li>
+</ul>
+</li>
+<li>二极管的基本电路及其分析方法
+<ul>
+<li>简单二极管电路图解分析法</li>
+<li>二极管电路的简化模型分析方法
+<ol>
+<li><strong>理想模型</strong>：正向偏置：管压降=0V；反向偏置：电阻无穷大。近似条件：电源电压远大于管压降。</li>
+<li><strong>恒压降模型</strong>：管压降恒定：0.7V（硅管） 0.3V（锗管）。近似条件：$i_D$近似等于或大于1mA。</li>
+<li><strong>折线模型</strong>：$v_D=0.5\text{V}$（硅管）</li>
+<li><strong>小信号模型</strong>：等效为微变电阻</li>
+</ol>
+</li>
+<li>模型分析法应用举例
+<ol>
+<li><strong>整流电路</strong>：利用二极管的单向导电性</li>
+<li><strong>静态工作情况分析</strong>：理想模型、恒压模型、折线模型</li>
+<li><strong>限幅电路</strong></li>
+<li><strong>开关电路</strong>：判断电路中的二极管处于导通状态还是截止状态，可以先将二极管断开，然后观察（或经过计算）阳、阴两极间是正向电压还是反向电压，若是前者则二极管导通，否则二极管截止。</li>
+<li><strong>低电压稳压电路</strong>：利用二极管的正向压降特性，获得较好的稳压性能。单个硅管/0.7V，锗管/0.3V(具体见器件参数)。</li>
+<li><strong>小信号工作情况分析</strong>
+<ol>
+<li>分析电路的静态工作情况(求出静态工作点Q)；</li>
+<li>根据Q点算出微变电阻rd；</li>
+<li>根据小信号模型交流电路模型，求出小信号作用下电路的交流电压、电流；</li>
+<li>最后与静态值叠加，得出完整值。</li>
+</ol>
+</li>
+<li><strong>齐纳二极管（稳压管）</strong>：利用二极管反向击穿特性实现稳压。稳压二极管稳压时工作在反向电击穿状态。</li>
+</ol>
+</li>
 </ul>
 </li>
 </ol>
@@ -375,8 +449,9 @@
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 
