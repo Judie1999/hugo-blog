@@ -58,7 +58,7 @@
     "datePublished": "2020-12-28 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-28 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2020\/me_2020\/",
-    "wordCount" : "2854",
+    "wordCount" : "4816",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -166,7 +166,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"> 期末复习 </a>
                         
                 </span>
-                <span class="post-word-count">, 2854 words</span>
+                <span class="post-word-count">, 4816 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -339,6 +339,109 @@
 </ul>
 </li>
 </ol>
+<h2 id="半导体三极管">半导体三极管</h2>
+<ol>
+<li>三极管的结构和符号
+<img src="/img/me_2020/303_0_npn_pnp.png" alt="NPN PNP"></li>
+<li>结构特点：
+<ul>
+<li>发射区掺杂浓度最高；</li>
+<li>集电区掺杂浓度低于发射区，且面积大；</li>
+<li>基区很薄，一般在几个微米，且掺杂浓度最低。</li>
+</ul>
+</li>
+<li>BJT内部载流子的传播过程（图见ppt第5张）
+<ol>
+<li>发射区向基区扩散载流子：$I_E = I_{EN} + I_{EP}\approx I_{EN}$</li>
+<li>载流子在基区扩散与复合：$I_B=I_{EP}+I_{BN}-I_{CBO}=I_{EP}+I_{EN}-I_{CN}-I_{CBO}=I_E-I_C$</li>
+<li>集电区收集载流子：$I_C=I_{CN}+I_{CBO}$</li>
+</ol>
+</li>
+<li>BJT的电流分配关系
+<ul>
+<li>由传输过程：$I_E\approx I_{En},I_C=I_{CN}+I_{CBO},I_B\approx I_E-I_C$</li>
+<li><strong>共基极直流放大系数</strong>：$\bar{\alpha}=\frac{传输到集电极的电流}{发射极注入电流}\Rightarrow\bar{\alpha}=\frac{I_{CN}}{I_E}=\frac{I_C-I_{CBO}}{I_E}$（通常$I_C\gg I_{CBO}$，故$\bar{\alpha}\approx\frac{I_C}{I_E}$。电流放大系数$\alpha$只与管子的结构尺寸和掺杂浓度有关，**与外加电压无关**。一般$\alpha=0.9\sim 0.99$。）</li>
+<li><strong>共射极放大系数</strong>：$\bar{\beta}=\frac{\bar{\alpha}}{1-\bar{\alpha}},I_{CEO}=(1+\bar{\beta})I_{CBO}$，故$I_C=\bar{\beta}I_B+I_{CEO}$。当$I_C\gg I_{CEO}$时，$\bar{\beta}\approx\frac{I_C}{I_B}$。</li>
+</ul>
+</li>
+<li>三极管的三种组态
+<ul>
+<li>共发射极接法（CE）</li>
+<li>共基极接法（CB）</li>
+<li>共基电极接法（CC）</li>
+</ul>
+</li>
+<li>三极管放大作用的两个条件
+<ol>
+<li><strong>内部条件</strong>：发射区杂质浓度远高于基区杂质浓度，且基区很薄</li>
+<li><strong>外部条件</strong>：发射结正偏，集电结反偏</li>
+</ol>
+</li>
+<li>BJT的输入特性曲线的三个部分
+<ol>
+<li>死区</li>
+<li>非线性区</li>
+<li>近似线形区（工作压降：硅管$v_{BE}\approx 0.6\sim 0.7\text{V}$，锗管$v_{BE}\approx 0.2\sim 0.3\text{V}$；*印象中这个作业里好像出现过*）</li>
+</ol>
+</li>
+<li>BJT的输出特性曲线的三个区域
+<ol>
+<li><strong>饱和区</strong>：$i_C$明显受$v_{CE}$控制的区域，该区域内一般$v_{CE}&lt;0.7\text{V}$（硅管）。此时发射结正偏，集电结正偏或反偏电压很小。</li>
+<li><strong>截止区</strong>：$i_C$接近0的区域，相当于$i_B=0$的曲线下方。此时$v_{BE}$小于死区电压。</li>
+<li><strong>放大区</strong>：$i_C$平行于$v_{CE}$轴的区域，曲线基本平行等距。此时，发射结正偏，集电结反偏。</li>
+</ol>
+</li>
+<li><strong>基区宽度调制效应</strong>：对共射极电路有$v_{CE}=v_{CB}+v_{BE}$。在基极电流不变的情况下，集电极电流将随$v_{CE}$的增大而增大，输出特性比较平坦的部分随着$v_{CE}$的增加略向上倾斜，称为**Early效应**。</li>
+<li>BJT的主要参数
+<ol>
+<li>电流放大系数
+<ol>
+<li>共射极直流电流放大系数$\bar{\beta}=\frac{I_C-I_{CEO}}{I_B}\approx\frac{I_C}{I_B}$（$v_{CE}$不变）</li>
+<li>共发射极交流电流放大系数$\beta=\frac{\Delta I_C}{\Delta I_B}$（$v_{CE}$不变）</li>
+<li>共基极直流电流放大系数$\bar{\alpha}=\frac{I_C-I_{CBO}}{I_E}\approx\frac{I_C}{I_E}$</li>
+<li>共基极交流电流放大系数$\alpha=\frac{\Delta I_C}{\Delta I_E}$（$v_{CB}$不变）</li>
+<li>当$I_{CBO}$和$I_{CEO}$很小时，$\bar{\alpha}\approx\alpha,\bar{\beta}\approx\beta$</li>
+</ol>
+</li>
+<li>极间反向电流
+<ol>
+<li><strong>集电极极间反向饱和电流</strong>$I_{CBO}$：发射极开路时，集电结的反向饱和电流。</li>
+<li><strong>集电极极间的反向饱和电流</strong>$I_{CEO}=(1+\bar{\beta})I_{CBO}$：输出特性曲线$I_B=0$那条曲线所对应的$Y$坐标的数值。也称为**集电极发射极间穿透电流**。</li>
+</ol>
+</li>
+<li>极限参数
+<ol>
+<li>集电极最大允许电流$I_{CM}$</li>
+<li>集电极最大允许功率损耗$P_{CM}=I_C V_{CE}$</li>
+<li>反向击穿电压
+<ol>
+<li>$V_{(BR)CBO}$：发射极开路时的集电结反向击穿电压。</li>
+<li>$V_{(BR)EBO}$：集电极开路时发射结的反向击穿电压。</li>
+<li>$V_{(BR)CEO}$：集电极开路时集电极和发射极间的击穿电压。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>温度对BJT参数及特性的影响
+<ol>
+<li>温度对BJT参数的影响
+<ol>
+<li>温度每升高10摄氏度，$I_{CBO}$约增加一倍</li>
+<li>温度每升高1摄氏度，$\beta$值约增大0.5%~1%</li>
+<li>温度升高时，$V_{(BR)CBO}$和$V_{(BR)CEO}$都会有所提高</li>
+</ol>
+</li>
+<li>温度对BJT特性曲线的影响
+<ol>
+<li>温度升高，输入特性曲线左移。</li>
+<li>温度升高，输出特性曲线上移，曲线族间距增大。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 
     </div>
 
@@ -426,7 +529,7 @@
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2019 - 2020</span>
+        <span itemprop="copyrightYear">2019 - 2021</span>
         
         <span class="with-love">
     	 <i class="iconfont icon-love"></i> 
