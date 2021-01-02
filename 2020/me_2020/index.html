@@ -58,7 +58,7 @@
     "datePublished": "2020-12-28 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-28 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2020\/me_2020\/",
-    "wordCount" : "4816",
+    "wordCount" : "5714",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -166,7 +166,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"> 期末复习 </a>
                         
                 </span>
-                <span class="post-word-count">, 4816 words</span>
+                <span class="post-word-count">, 5714 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -428,18 +428,65 @@
 <ol>
 <li>温度对BJT参数的影响
 <ol>
-<li>温度每升高10摄氏度，$I_{CBO}$约增加一倍</li>
+<li>温度每升高10摄氏度，$I_{CBO}$约增加一倍（温度升高，输出特性曲线上移）</li>
 <li>温度每升高1摄氏度，$\beta$值约增大0.5%~1%</li>
 <li>温度升高时，$V_{(BR)CBO}$和$V_{(BR)CEO}$都会有所提高</li>
 </ol>
 </li>
 <li>温度对BJT特性曲线的影响
 <ol>
-<li>温度升高，输入特性曲线左移。</li>
-<li>温度升高，输出特性曲线上移，曲线族间距增大。</li>
+<li>温度升高，输入特性曲线左移。【温度变化对输入特性曲线的影响】</li>
+<li>温度升高，输出特性曲线上移，曲线族间距增大。【温度变化对$\beta$影响】</li>
 </ol>
 </li>
 </ol>
+</li>
+</ol>
+<h2 id="三极管放大电路">三极管放大电路</h2>
+<ol>
+<li>共射极放大电路的工作原理
+<ol>
+<li><strong>静态</strong>：输入信号$v_i=0$时，放大电路的工作状态称为静态或直流工作状态。一般硅管$V_{BE}=0.7\text{V}$，锗管$V_{BE}=0.2\text{V}$。【ppt 304-4有例题】</li>
+<li><strong>动态</strong>：输入正弦信号$v_S$后，电路将处在动态工作情况。此时，BJT各极电流及电压都将在静态值的基础上随输入信号作相应的变化。
+<ul>
+<li>先静态：确定静态工作点$Q(I_{BQ}, I_{CQ}, V_{CEQ})$</li>
+<li>后动态：确定性能指标（$A_V,R_i,R_O$等）</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>BJT放大电路的图解分析法
+<ol>
+<li>静态工作点的图解分析 (PPT 304-7)
+<ol>
+<li>画出直流通路</li>
+<li>列输入回路方程：$v_{BE}=V_{BB}-i_BR_b$</li>
+<li>列输出回路方程（直流负载线）：$v_{CE}=V_{CC}-i_CR_c$</li>
+<li>在输入特性曲线上作出直线$v_{BE}=V_{BB}-i_BR_b$，两线的焦点即是$Q$点，得到$I_{BQ}$</li>
+<li>在输出特性曲线上，作出直流负载线$v_{CE}=V_{CC}-i_CR_c$，与$I_{BQ}$曲线交点即为$Q$点，从而得到$V_{CEQ}$和$I_{CQ}$。</li>
+</ol>
+</li>
+<li>动态工作情况的图解分析
+<ol>
+<li>根据$v_S$的波形，在BJT的输入特性曲线上画出$v_{BE}$、$i_B$的波形：$v_S=V_{sm}\sin\omega t$, $v_{BE}=V_{BB}+v_S-i_BR_b$</li>
+<li>根据$i_B$的变化范围在输出特性曲线上画出$i_C$和$v_{CE}$的波形：$v_{CE}=V_{CC}-i_CR_c$</li>
+</ol>
+</li>
+<li>静态工作点对波形失真的影响
+<ol>
+<li>静态工作点太高容易出现饱和失真</li>
+<li>静态工作点太低容易出现截至失真</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>温度对工作点的影响【见“半导体三极管”】</li>
+<li>基极分压式射极偏置电路【图见PPT 304-20】
+<ul>
+<li>目标：温度变化时，$I_{CQ}$维持恒定。</li>
+<li>如果温度变化时，$b$点电位能基本不变，则可实现静态工作点的稳定。</li>
+<li>条件：$I_1\gg I_{BQ}$, $V_B\gg V_{BEQ}$，此时$V_B\approx\frac{R_{b2}}{R_{b1}+R_{b2}}\cdot V_{CC}$，$V_B$与温度无关，$R_e$取值越大反馈控制作用越强。</li>
+</ul>
 </li>
 </ol>
 
