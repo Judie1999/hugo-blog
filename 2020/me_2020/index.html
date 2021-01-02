@@ -58,7 +58,7 @@
     "datePublished": "2020-12-28 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-28 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2020\/me_2020\/",
-    "wordCount" : "5714",
+    "wordCount" : "6461",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -166,7 +166,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"> 期末复习 </a>
                         
                 </span>
-                <span class="post-word-count">, 5714 words</span>
+                <span class="post-word-count">, 6461 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -487,6 +487,59 @@
 <li>如果温度变化时，$b$点电位能基本不变，则可实现静态工作点的稳定。</li>
 <li>条件：$I_1\gg I_{BQ}$, $V_B\gg V_{BEQ}$，此时$V_B\approx\frac{R_{b2}}{R_{b1}+R_{b2}}\cdot V_{CC}$，$V_B$与温度无关，$R_e$取值越大反馈控制作用越强。</li>
 </ul>
+</li>
+</ol>
+<h2 id="场效应管">场效应管</h2>
+<ol>
+<li>场效应晶体管（FET）具有体积小、重量轻、功耗小、寿命长、输入阻抗高、噪声低、制造工艺简单等优点。</li>
+<li>场效应管的分类
+<ol>
+<li>绝缘栅型 MOSFET
+<ol>
+<li>增强型：场效应管没有加偏置电压时，就有导电沟道存在【N沟道 / P沟道】</li>
+<li>耗尽型：场效应管没有加偏置电压时，没有导电沟道【N沟道 / P沟道】</li>
+</ol>
+</li>
+<li>结型 JFET （耗尽型） 【N沟道 / P沟道】</li>
+</ol>
+</li>
+<li>金属-氧化物-半导体场效应管（MOSFET）是利用半导体表面点场效应进行工作，故又称为<strong>表面场效应器件</strong>。</li>
+<li>各种场效应管的特性比较（工作原理见ppt）
+<img src="/img/me_2020/305.png" alt="各种场效应管特性比较"></li>
+<li>MOSFET的主要参数
+<ol>
+<li>直流参数
+<ol>
+<li>开启电压 $V_T$（增强型参数）</li>
+<li>夹断电压$V_P$（耗尽型参数）</li>
+<li>饱和漏电流$I_{DSS}$（耗尽型参数）</li>
+<li>直流输入电阻$R_{GS} (10^9\Omega\sim 10^{15}\Omega)$</li>
+</ol>
+</li>
+<li>交流参数
+<ol>
+<li>输出电阻$r_{ds}=\frac{\partial v_{DS}}{\partial i_D}$（给定$v_{GS}$）</li>
+<li>低频互导$g_m=\frac{\partial i_D}{\partial v_{GS}}$</li>
+</ol>
+</li>
+<li>极限参数
+<ol>
+<li>最大漏极电流$I_{DM}$</li>
+<li>最大耗散功率$P_{DM}$</li>
+<li>最大漏源电压$V_{(BR)DS}$</li>
+<li>最大栅源电压$V_{(BR)GS}$</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>FET和BJT重要特性的比较
+<ol>
+<li>3个电极对应：g$\leftrightarrow$b, s$\leftrightarrow$e, d$\leftrightarrow$c</li>
+<li>工作原理不同，但都可以利用两个电极之间的电压控制流过第三个电极的电流来实现输入对输出的控制。MOS管栅极电流$i_G=0$，而BJT管$i_B\neq 0$。</li>
+<li>MOS管$g_m$不仅与$V_{GSQ}$和开启（夹断）电压的差值有关，还与起沟道的宽长比有关。BJT的$g_m$仅与$I_{CQ}$有关。</li>
+<li>输出电阻都等于Early电压$V_A$与静态电流的比值。通常BJT的$V_A$大，BJT的$r_O$大。</li>
+<li>MOS管的$K_n$与BJT的$\beta$或$\alpha$有类似性质，即主要取决于管子的固有参数，与所在的电路无关。</li>
+</ol>
 </li>
 </ol>
 
