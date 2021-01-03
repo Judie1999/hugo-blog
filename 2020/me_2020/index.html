@@ -58,7 +58,7 @@
     "datePublished": "2020-12-28 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-28 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2020\/me_2020\/",
-    "wordCount" : "6461",
+    "wordCount" : "7071",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -166,7 +166,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"> 期末复习 </a>
                         
                 </span>
-                <span class="post-word-count">, 6461 words</span>
+                <span class="post-word-count">, 7071 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -539,6 +539,52 @@
 <li>MOS管$g_m$不仅与$V_{GSQ}$和开启（夹断）电压的差值有关，还与起沟道的宽长比有关。BJT的$g_m$仅与$I_{CQ}$有关。</li>
 <li>输出电阻都等于Early电压$V_A$与静态电流的比值。通常BJT的$V_A$大，BJT的$r_O$大。</li>
 <li>MOS管的$K_n$与BJT的$\beta$或$\alpha$有类似性质，即主要取决于管子的固有参数，与所在的电路无关。</li>
+</ol>
+</li>
+</ol>
+<h2 id="场效应管放大电路">场效应管放大电路</h2>
+<p><img src="/img/me_2020/306_0.png" alt="共源极放大电路"></p>
+<ol>
+<li>组成
+<ol>
+<li>如何让MOS管工作在饱和区？
+<ul>
+<li>$V_{GG}$：提供栅源电压使$v_{GS}&gt;V_{TN}$</li>
+<li>$V_{DD}$和$R_d$：提供合适的漏源电压，使$v_{DS}&gt;v_{GS}-V_{TN}$</li>
+<li>$R_d$还兼有将电流转换成电压的作用。通常称$V_{GG}$和$V_{DD}$为三极管的工作电源，$v_i$为信号。</li>
+</ul>
+</li>
+<li>信号如何通过MOS管传递？
+<ul>
+<li>$v_i\rightarrow \Delta v_{GS}\rightarrow\Delta i_D\rightarrow\Delta v_{DS}(=v_O)$</li>
+<li>信号由栅源回路输入、漏源回路输出，即源极是公共端，所以称此电路为<strong>共源电路</strong>。也可看作信号由栅极输入、漏极输出。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>工作原理
+<ol>
+<li>放大电路的静态和动态
+<ol>
+<li><strong>静态</strong>：输入信号为0（$v_i=0$或$i_i=0$）时，放大电路的工作状态，也称<strong>直流工作状态</strong>。此时，FET的直流量$I_D,V_{GS},V_{DS}$在输出特性曲线上表述为一个确定的点，习惯上称该点为静态工作点Q，常将上述三个电量写成$I_{DQ},V_{GSQ},V_{DSQ}$。</li>
+<li><strong>动态</strong>：输入信号不为零时，放大电路的工作状态，也称<strong>交流工作状态</strong>。</li>
+</ol>
+</li>
+<li>放大电路的直流通路和交流通路
+<ol>
+<li>仅有直流电流流经的通路为直流通路，<strong>直流电压源对交流相当于短路</strong></li>
+<li>仅有交流电流流经的通路为交流通路，<strong>直流电压源对交流相当于短路</strong></li>
+<li>放大电路的静态工作点估算【PPT 306-8】</li>
+<li>放大电路的动态工作情况</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>用图解法确定静态工作点Q【PPT 306-14】</li>
+<li>动态工作情况的图解分析
+<ol>
+<li>正常工作情况【PPT 306-16】</li>
+<li>静态工作点对波形失真的影响【PPT 306-18】</li>
 </ol>
 </li>
 </ol>
