@@ -58,7 +58,7 @@
     "datePublished": "2020-12-28 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-28 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2020\/me_2020\/",
-    "wordCount" : "7071",
+    "wordCount" : "7879",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -166,7 +166,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"> 期末复习 </a>
                         
                 </span>
-                <span class="post-word-count">, 7071 words</span>
+                <span class="post-word-count">, 7879 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -585,6 +585,50 @@
 <ol>
 <li>正常工作情况【PPT 306-16】</li>
 <li>静态工作点对波形失真的影响【PPT 306-18】</li>
+</ol>
+</li>
+</ol>
+<h2 id="放大电路模型">放大电路模型</h2>
+<ol>
+<li><strong>信号</strong>：信息的载体；<strong>电信号</strong>：用电量来描述信息的变化。</li>
+<li>（电）信号源的电路表达形式：电压源等效电路（戴维宁）$\Leftrightarrow$电流源等效电路（诺顿）【$i_S=\frac{v_S}{R_S}$】</li>
+<li>模拟信号和数字信号
+<ol>
+<li><strong>模拟信号</strong>：在时间和幅值上都是连续的信号。</li>
+<li><strong>数字信号</strong>：在时间和幅值上都是离散的信号。</li>
+</ol>
+</li>
+<li>模拟信号和数字信号分类
+<ol>
+<li>时间连续、数值连续：模拟信号</li>
+<li>时间离散、数值连续：AD转换信号</li>
+<li>时间连续、数值离散：DA转换信号</li>
+<li>时间离散、数值离散：数值信号</li>
+</ol>
+</li>
+<li>放大电路的符号及模拟信号放大
+<img src="/img/me_2020/307_0.png" alt="放大电路的符号">
+<ol>
+<li>电压增益（电压放大倍数）：$A_v=\frac{v_o}{v_i}$</li>
+<li>电流增益：$A_i=\frac{i_o}{i_i}$</li>
+<li>互阻增益：$A_r=\frac{v_o}{i_i}$（$\Omega$）</li>
+<li>互导增益：$A_g=\frac{i_o}{v_i}$（S）</li>
+</ol>
+</li>
+<li>放大电路模型：电压放大模型，电流放大模型，互阻放大模型，互道放大模型，隔离放大电路模型</li>
+<li>放大电路的主要性能指标：
+<ol>
+<li>输入电阻：$R_i=\frac{v_i}{i_i}$，决定了放大电路从信号源吸收信号幅值的大小</li>
+<li>输出电阻：$R_o=\frac{v_t}{i_t}$（$v_s=0,R_L=\omega$），决定了放大电路的负载能力</li>
+<li>增益：反应放大电路在输入信号控制下，将供电电源能量转换为输出信号能量的能力。包括$A_v=\frac{v_o}{v_i}, A_i=\frac{i_o}{i_i}, A_R=\frac{v_o}{i_i}, A_g=\frac{i_o}{v_i}$，其中$A_v,A_i$常用分贝（dB）表示：
+<ol>
+<li>电压增益 $=20\lg|A_v|~(\text{dB})$</li>
+<li>电流增益 $=20\lg|A_i|~(\text{dB})$</li>
+<li>功率增益 $=10\lg A_p~(\text{dB})$</li>
+</ol>
+</li>
+<li>频率响应及带宽：在输入正弦信号情况下，输出随输入信号频率变化的稳态响应，称为放大电路的贫路响应。【PPT 307-18有公式】带宽$BW=f_H-f_L$（$f_H$为上限频率，$f_L$为下限频率）。频率失真（线性失真）：幅度失真，相位失真</li>
+<li>非线性失真：由元器件非线性特性引起的失真。在频谱图上表现为新的频率分量产生。</li>
 </ol>
 </li>
 </ol>
