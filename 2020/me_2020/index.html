@@ -58,7 +58,7 @@
     "datePublished": "2020-12-28 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-28 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2020\/me_2020\/",
-    "wordCount" : "7879",
+    "wordCount" : "8650",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -166,7 +166,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"> 期末复习 </a>
                         
                 </span>
-                <span class="post-word-count">, 7879 words</span>
+                <span class="post-word-count">, 8650 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -631,6 +631,37 @@
 <li>非线性失真：由元器件非线性特性引起的失真。在频谱图上表现为新的频率分量产生。</li>
 </ol>
 </li>
+</ol>
+<h2 id="运算放大器">运算放大器</h2>
+<ol>
+<li>集成电路运算放大器的功能：信号放大；信号运算（加、减、乘、除、对数、反对数、平方、开方等）；信号的处理（滤波、调制）；波形的产生和变换。</li>
+<li>集成电路运算放大器的分类：通用运放和专用运放（高阻、低温漂、高速、低功耗、高压大功率）；单运放（$\mu\text{A}741$）、双运放（$\text{LM358}$）、四运放（$\text{LM}324$）。</li>
+<li>集成电路运算放大器符号
+<img src="/img/me_2020/308_0.png" alt="运算放大器符号"></li>
+<li>放大：在输入信号控制下，放大电路将供电电源能量转换成输出信号能量。</li>
+<li>通常集成电路运算放大器开环电压增益$A_{VO}$很高，输入电阻$r_i$很大，输出电阻$r_o$很小
+<ol>
+<li>$v_O=A_{VO}(v_P-v_N)\quad(V_-&lt;v_O&lt;V_+)$</li>
+<li>当$V_{VO}(v_P-v_N)\geq V_+$时，$V_O=V_+$</li>
+<li>当$V_{VO}(v_P-v_N)\leq V_-$时，$V_O=V_-$</li>
+</ol>
+</li>
+<li>运算放大器的电压传输特性：线性区 + 饱和区（理想运算放大器：$A_{vo}=\infty, r_{id}=\infty, r_o=0$）</li>
+<li>反馈（feedback）：将输出量通过恰当的检测装置返回到输入端并与输入量进行比较的过程。
+<ol>
+<li><strong>正反馈</strong>：输入量不变时，引入反馈后输出量变大了；<strong>负反馈</strong>：输入量不变时，引入反馈后输出量变小了。</li>
+<li>判别方法：瞬时极性法。即在电路中，从输入端开始，沿着信号流向，标出某一时刻有关节点电压变化的斜率（正斜率或负斜率，用“+”、“-”号表示）。</li>
+</ol>
+</li>
+<li>同向放大电路的反馈过程【PPT 308-13】</li>
+<li>反馈的电压增益【PPT 308-14】</li>
+<li>虚短和虚断
+<ol>
+<li>虚短：在深度负反馈作用下，$v_N$自动跟踪$v_P$，净输入电压$(v_P-v_N)\rightarrow 0$,即P端与N端相当于短路。</li>
+<li>虚断：由于$(v_P\approx v_N)$而运放的输入电阻阻值又很高，因此流经两输入端之间的电流$i_p=i_N\approx 0$。</li>
+</ol>
+</li>
+<li>同向放大电路 - 电压跟随器；反向放大电路；求差电路；求和电路。</li>
 </ol>
 
     </div>
