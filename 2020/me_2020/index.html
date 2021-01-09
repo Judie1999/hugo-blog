@@ -47,7 +47,7 @@
     "articleSection" : "posts",
     "name" : "微电子2020期末复习 (In Progress)",
     "headline" : "微电子2020期末复习 (In Progress)",
-    "description" : "还在施工中，尽量保证考前五天结束施工。不保证内容准确性、全面性，如果有建议欢迎戳我QQ。 半导体物理基础 半导体是一种导电能力介于导体（$\\rh",
+    "description" : "第一版施工完毕。不保证内容准确性、全面性，如果有建议欢迎戳我QQ。 半导体物理基础 半导体是一种导电能力介于导体（$\\rho \u0026lt; 10^{-4}\\O",
     "inLanguage" : "en-us",
     "author" : "Judy",
     "creator" : "Judy",
@@ -58,7 +58,7 @@
     "datePublished": "2020-12-28 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-28 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/Judie1999.github.io\/2020\/me_2020\/",
-    "wordCount" : "9175",
+    "wordCount" : "10600",
     "keywords" : [ "notes", "Judy Park"]
 }
 </script>
@@ -166,7 +166,7 @@
                         <a href="https://Judie1999.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"> 期末复习 </a>
                         
                 </span>
-                <span class="post-word-count">, 9175 words</span>
+                <span class="post-word-count">, 10600 words</span>
         </div>
     </header>
     <div class="post-content">
@@ -188,7 +188,7 @@
           
 
           <blockquote>
-<p><strong>还在施工中，尽量保证考前五天结束施工。不保证内容准确性、全面性，如果有建议欢迎戳我QQ。</strong></p>
+<p><strong>第一版施工完毕。不保证内容准确性、全面性，如果有建议欢迎戳我QQ。</strong></p>
 </blockquote>
 <h2 id="半导体物理基础">半导体物理基础</h2>
 <ol>
@@ -615,7 +615,7 @@
 <li>互导增益：$A_g=\frac{i_o}{v_i}$（S）</li>
 </ol>
 </li>
-<li>放大电路模型：电压放大模型，电流放大模型，互阻放大模型，互道放大模型，隔离放大电路模型</li>
+<li>放大电路模型：电压放大模型，电流放大模型，互阻放大模型，互导放大模型，隔离放大电路模型</li>
 <li>放大电路的主要性能指标：
 <ol>
 <li>输入电阻：$R_i=\frac{v_i}{i_i}$，决定了放大电路从信号源吸收信号幅值的大小</li>
@@ -715,6 +715,122 @@
 <li>复合：与非（$\overline{A\cdot B}$），或非（$\overline{A+B}$），异或，同或（$L=AB+\bar{A}\bar{B}$）</li>
 </ol>
 </li>
+</ol>
+<h2 id="逻辑门电路">逻辑门电路</h2>
+<ol>
+<li><strong>逻辑门</strong>：实现基本逻辑运算和符合逻辑运算的单元电路</li>
+<li>逻辑门电路的分类
+<ol>
+<li>分立门电路
+<ol>
+<li>二极管门电路</li>
+<li>三极管门电路</li>
+</ol>
+</li>
+<li>集成门电路
+<ol>
+<li>MOS门电路（NMOS门，PMOS门，CMOS门）</li>
+<li>TTL门电路</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>逻辑门电路的一般特性
+<ol>
+<li>输入和输出的高、低电平
+<ol>
+<li>输入低电平的上限值：$V_{IL(\max)}$</li>
+<li>输入高电平的下限值：$V_{IH(\min)}$</li>
+<li>输出高电平的下限值：$V_{OH(\min)}$</li>
+<li>输出低电平的上限值：$V_{OL(\max)}$</li>
+</ol>
+</li>
+<li>噪声容限
+<ol>
+<li>当前级门输出高电平的最小值时允许负向噪声电压的最大值：$V_{NH}=V_{OH(\min)}-V_{IH(\min)}$</li>
+<li>当前级门输出低电平的最大值时允许正向噪声电压的最大值：$V_{NL}=V_{IL(\max)}-V_{OL(\max)}$</li>
+</ol>
+</li>
+<li>传输延迟时间：表征门电路的<strong>开关速度</strong>的参数，说明门电路在输入脉冲波形的作用下，其输出波形相对于输入波形延迟了多长的时间。</li>
+<li>功耗
+<ol>
+<li>静态功耗：当电路没有状态转换时的功耗，即门电路空载时电源总电流$I_D$与电源电压$V_{DD}$的乘积。</li>
+<li>动态功耗：电路在输出状态转换时的功耗。</li>
+<li>对于TTL门电路来说，<strong>静态功耗</strong>是主要的。CMOS电路的静态功耗非常低，CMOS门电路有动态功耗。</li>
+</ol>
+</li>
+<li>延时-功耗积：速度功耗综合性的指标，用符号$DP$表示。</li>
+<li>扇入与扇出数
+<ol>
+<li>扇入数：取决于逻辑门的输入端的个数。</li>
+<li>扇出数：指其在正常工作情况下，所能带同类门电路的最大数目。</li>
+</ol>
+</li>
+<li>MOS开关及其等效电路
+<ol>
+<li>$v_I&lt;V_T$：MOS管截止，输出高电平。</li>
+<li>$V_I&gt;V_T$并且比较大：MOS管工作在可变电阻区，输出低电平。</li>
+<li>MOS管相当于一个由$v_{GS}$控制的无触点开关。</li>
+</ol>
+</li>
+<li>CMOS反相器（工作原理，电压传输特性和电流传输特性，工作速度）</li>
+<li>CMOS逻辑门（与非门，或非门，异或门）</li>
+<li>CMOS传输门（双向模拟开关） <strong>工作原理</strong></li>
+<li>TTL逻辑门（BJT的开关特性，BJT的开关时间，TTL与非门，TTL或非门）</li>
+<li>TTL反相器的基本电路
+<ol>
+<li>电路组成（输入级：提高电路的开关速度；中间级：作为输出级的驱动信号；输出级：提高开关速度和带负载能力）</li>
+<li>TTL反相器的工作原理（逻辑关系、性能改善）</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="半导体存储器">半导体存储器</h2>
+<ol>
+<li>半导体存储器的分类
+<ol>
+<li>RAM (Ramdom-Access Memory)
+<ol>
+<li>静态随机存储器 SRAM（存储单元：6个N沟道增强型MOS管；速度快，贵）</li>
+<li>动态随机存储器 DRAM（相对速度慢，便宜）
+<ol>
+<li>异步存储： FP DRAM, EDO DRAM</li>
+<li>同步存储：显存平台（GDDR1-6），笔记本平台（LPDDR），PC平台（SDR, DDR1-4）</li>
+<li>伪静态随机存储器 PSRAM</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>ROM (Read-Only Memory)
+<ol>
+<li>固定ROM - 掩模ROM （出场时已经固定，不能更改，适合大量生产简单，便宜，非易失性）</li>
+<li>可编程ROM（一次性编程，不能改写）
+<ol>
+<li>PROM（用紫外线擦出）</li>
+<li>EPROM</li>
+<li>E$^2$PROM（电可擦出）</li>
+<li>FLASH (NOR FLASH, NAND FLASH: eMMC, SSD, USB3.0)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>基本概念
+<ol>
+<li>字长（位数）：表示一个信息的多位二进制码成为一个字，字的位数成为字长。</li>
+<li>字数：字的总量。字数$=2^n$（n为存储器外部地址线的线数）</li>
+<li>地址：每个字的编号</li>
+<li>存储容量（M）：存储二值信息的总量（=字数$\times$位数）</li>
+</ol>
+</li>
+</ol>
+<h2 id="微电子学的新发展">微电子学的新发展</h2>
+<ol>
+<li>当前微电子技术的发展热点：生物探测芯片，神经网络计算（忆阻器），超高频电路（石墨烯），超低功耗逻辑/存储（量子隧穿晶体管，自旋电子学晶体管），量子计算（自选电子学晶体管），智能穿戴（柔性电子学），拓扑绝缘体</li>
+<li>柔性电子器件的材料：碳纳米管，金属氧化物半导体薄膜，金属纳米薄膜、金属纳米线，有机高分子薄膜，水凝胶离子导体，液态金属</li>
+<li>柔性电子制造方法：转移印刷，喷墨印刷，纤维结构形成</li>
 </ol>
 
     </div>
